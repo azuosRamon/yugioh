@@ -11,7 +11,8 @@ const corpo_body = document.getElementById('corpo_body');
 const menu = document.getElementById('menu');
 const background_procurar = document.getElementById('background_procurar');
 const imagem_logo = document.getElementById('imagem_logo');
-
+const resetar_form = document.getElementById('resetar_form');
+const procurar_p = document.getElementById('procurar_p');
 background_procurar.addEventListener("click", ()=>{
     menu_procurar.classList.toggle('desativar_procura');
 
@@ -47,11 +48,18 @@ function atualizar_cartas(url){
 
         imagem_logo.style.cursor = 'pointer';
         imagem_logo.addEventListener("click", () => {
+            cartas_inicio()
+        })
+        resetar_form.onclick = () =>{
+            cartas_inicio();
+            procurar_p.innerHTML = "Utilize um dos campos para pesquisar!";
+        }
+        function cartas_inicio(){
             section_cartas.innerHTML = "";
             limite_cartas_tela = 0;
             cartas_amostrar = lista_total_cartas;
             inserir_x_cartas(12);
-        })
+        }
         
         let lista_ids = [];
         function pegar_ids(lista_favoritos){
@@ -63,7 +71,7 @@ function atualizar_cartas(url){
         }
         function definir_icone_favoritos(x, lista){
             lista = pegar_ids(lista);
-            console.log(lista)
+            //console.log(lista)
             return (lista.includes(x)) ? "imagens/card-burn.svg":"imagens/card-draw.svg";
         }
 
@@ -79,8 +87,8 @@ function atualizar_cartas(url){
             //FUNCAO PARA ADICIONAR OU RETIRAR DOS FAVORITOS
             img_icone.addEventListener("click", ()=>{
                 lista_ids = pegar_ids(favoritos);
-                console.log(lista_ids)
-                console.log(item.id)
+                //console.log(lista_ids)
+                //console.log(item.id)
                 if (!(lista_ids.includes(item.id))){
                     if (lista_ids.length >= 60){
                         alert("Número Máximo de cartas no deck atingido! Para continuar remova uma carta!");
@@ -187,7 +195,6 @@ function atualizar_cartas(url){
                 }
             };
             input.addEventListener('keyup', ()=>{
-                const procurar_p = document.getElementById('procurar_p');
                 limite_cartas_tela = 0;
                 section_cartas.innerHTML = ""
                 const cartas_com_informacao_procurada = lista_total_cartas.
@@ -219,8 +226,8 @@ function atualizar_cartas(url){
         // SCROLL INFINITO
         window.addEventListener("scroll", () =>{
             if ((window.scrollY + window.innerHeight + 5) > document.body.scrollHeight){
-                console.log(limite_cartas_tela);
-                console.log(cartas_amostrar);
+                //console.log(limite_cartas_tela);
+                //console.log(cartas_amostrar);
                 inserir_x_cartas(9);
             };
             if (window.scrollY > menu.clientHeight){
