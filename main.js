@@ -50,10 +50,6 @@ function atualizar_cartas(url){
         imagem_logo.addEventListener("click", () => {
             cartas_inicio()
         })
-        resetar_form.addEventListener("click", () =>{
-            cartas_inicio;
-            procurar_p.innerHTML = "Utilize um dos campos para pesquisar!";
-        });
         function cartas_inicio(){
             section_cartas.innerHTML = "";
             limite_cartas_tela = 0;
