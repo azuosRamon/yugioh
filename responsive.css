@@ -1,0 +1,184 @@
+.grid {
+    display: grid;
+}
+/*CONFIGURACÕES PADROES ATE 768*/
+@media (max-width: 768px){
+    #quantidade_cartas_deck{
+        margin-left: 8%;
+    }
+    
+}
+
+/* =================== CELULAR =================== */
+    /* ESTILOS PARA TELA MENORES OU IGUAIS A 360PX */ 
+        @media (max-width: 360px){
+            div#modal_informacoes{
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+            #section_cartas{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            #container_menu img {
+                margin: auto 20px;
+                width: 45%;
+                height: fit-content;
+                max-height: 100%;
+            }
+            #procurar_cartas {
+                width: 90%;
+            }
+        }
+
+
+
+    /* ESTILOS PARA TELA MENORES OU IGUAIS A 480PX */ 
+        @media (min-width: 361px) and (max-width: 480px){
+            div#modal_informacoes{
+                grid-template-columns: 1fr;
+                width: 80%;
+            }
+            #section_cartas{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            #container_menu img {
+                margin: auto 20px;
+                width: 40%;
+                height: fit-content;
+                max-height: 100%;
+            }
+            #procurar_cartas {
+                width: 85%;
+            }
+        }
+
+
+
+    /* ESTILOS PARA TELA MENORES OU IGUAIS A 768PX */ 
+        @media (min-width: 481px) and (max-width: 768px){
+            div#modal_informacoes{
+                grid-template-columns: 1fr;
+                width: 70%;
+            }
+            #section_cartas{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            #container_menu img {
+                margin: auto 20px;
+                width: 30%;
+                height: fit-content;
+                max-height: 100%;
+            }
+            #procurar_cartas {
+                width: 50%;
+            }
+        }
+
+
+
+
+
+
+/* =================== TABLET =================== */
+    /* ESTILOS PARA TELA MENORES OU IGUAIS A 1024PX - RETRATO */ 
+        @media (min-width: 769px) and (max-width: 1025px){
+            div#modal_informacoes{
+                grid-template-columns: 1fr;
+                width: 50%;
+            }
+            #section_cartas{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            #quantidade_cartas_deck{
+                margin-left: 8%;
+            }
+            #container_menu img {
+                margin: auto 20px;
+                width: 20%;
+                height: fit-content;
+                max-height: 100%;
+            }
+            #procurar_cartas {
+                width: 40%;
+            }
+        }
+        
+    /* ESTILOS PARA TELA MENORES OU IGUAIS A 1280PX - PAISAGEM */ 
+        @media (min-width: 1026px) and (max-width: 1280px){
+            div#modal_informacoes{
+                grid-template-columns: 1fr 1fr;
+                width: 80%;
+            }
+            #section_cartas{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .ul_informacoes{
+                height: 540px;
+            }
+            #quantidade_cartas_deck{
+                margin-left: 7%;
+            }
+            #container_menu img {
+                margin: auto 20px;
+                width: 20%;
+                height: fit-content;
+                max-height: 100%;
+            }
+            #procurar_cartas {
+                width: 30%;
+            }
+        }
+        
+
+/* =================== DESKTOP =================== */
+    /* ESTILOS PARA TELA MENORES OU IGUAIS A 1440px */ 
+        @media (min-width: 1281px) and (max-width: 1440px){
+            div#modal_informacoes{
+                grid-template-columns: 1fr 1fr;
+                width: 80%;
+            }
+            #section_cartas{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .ul_informacoes{
+                height: 540px;
+            }
+            #quantidade_cartas_deck{
+                margin-left: 6%;
+            }
+            #container_menu img {
+                margin: auto 20px;
+                width: 20%;
+                height: fit-content;
+                max-height: 100%;
+            }
+            #procurar_cartas {
+                width: 25%;
+            }
+        }
+
+    /* ESTILOS PARA TELA MAIORES QUE 1441PX */ 
+        @media (min-width: 1441px){
+            div#modal_informacoes{
+                grid-template-columns: 1fr 1fr;
+                width: 80%;
+            }
+            #section_cartas{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .ul_informacoes{
+                height: 540px;
+            }
+            #quantidade_cartas_deck{
+                margin-left: 5%;
+            }
+            #container_menu img {
+                margin: auto 20px;
+                width: 20%;
+                height: fit-content;
+                max-height: 100%;
+            }
+            #procurar_cartas {
+                width: 20%;
+            }
+        }

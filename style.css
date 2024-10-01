@@ -1,0 +1,243 @@
+body{
+    background-color: #222;
+    background-image: url(imagens/hieroglyphs-bg.png);
+    background-attachment: fixed;
+}
+.scroll_body{
+    overflow: hidden;
+}
+/* MENU */
+header{
+    width: 100%;
+    height: 100px;
+    top: 0;
+    background-color: #111;
+    z-index: 90;
+    position: relative;
+}
+.fixar_menu_topo{
+    position: fixed;
+    top: 0;
+}
+#container_menu{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: auto;
+}
+#container_menu img{
+    height: 100%;
+    margin-left: 20px;
+}
+#ul_menu{
+    display: flex;
+    justify-content: right;
+    justify-items: center;
+    align-items: center;
+    width: 30%;
+}
+#ul_menu li{
+    width: 50%;
+    text-align: center;
+}
+#ul_menu li p{
+    color: #f1f1f1;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.icone_menu{
+    color: #f1f1f1;
+    font-size: 30px;
+}
+#quantidade_cartas_deck{
+    display: block;
+    position: absolute;
+    color: #111;
+    background-color: red;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+    margin-top: -15px;
+}
+
+
+
+
+
+/*  MODAL */
+#modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    z-index: 98;
+    transform: rotateY('180');
+}
+#modal i{
+    z-index: 99;
+    font-size: 50px;
+    display: flex;
+    margin-top: 2%;
+    justify-content: right;
+    margin-right: 10%;
+    color: #f1f1f1;
+}
+div#modal_informacoes{
+    display: grid;
+    margin: auto;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 80%;
+    background-color: #222;
+    z-index: 97;
+    padding: 10px;
+    max-width: 768px;
+    border-radius: 10px;
+}
+.ul_informacoes{
+    background-color: #000;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+}
+.informacoes_cartas{
+    color: #fff;
+    font-size: 1.2em;
+    background-color: #222;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid #444;
+    border-radius: 10px;
+}
+.informacoes_cartas p{
+    margin-left: 3%;
+    text-align: justify;
+    padding: 0 4% 01% 1%;
+}
+.informacoes_cartas p:first-child{
+    font-size: 14px;
+    margin-left: 0%;
+    font-weight: bold;
+}
+.informacoes_cartas:last-child{
+    max-height: fit-content;
+    overflow: auto;
+}
+
+.img_modal{
+    border-radius: 10px;
+    width: 100%;
+
+}
+.ativado{
+    display: grid;
+}
+.desativado{
+    display: none;
+}
+
+/* PROCURAR */
+/*#6f4820*/
+#procurar_div {
+    display: grid;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 70;
+}
+#background_procurar {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+#procurar_cartas {
+    background-color: rgba(3,3,3,0.8);
+    position: fixed;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+    z-index: 80;
+    width: 30%;
+    text-align: center;
+    padding-top: 150px;
+    top: 0;
+}
+.ativar_procura{
+    display: flex;
+    left: 0;
+}
+.desativar_procura{
+    display: none;
+    left: -100%;
+}
+#procurar_p {
+    color: #979797;
+    text-align: center;
+    margin-top: 20px;
+}
+input{
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgba(1,1,1,.8);
+    border: 3px solid #000;
+    padding: 0 20px;
+    color: #f1f1f1;
+    margin: 5px;
+    border-radius: 10px;
+}
+input::placeholder{
+    color: #fff;
+}
+input:hover, input:focus, input:active {
+    border-color: #6f4820;
+}
+
+.div_content{
+    margin: 5px;
+}
+
+#section_cartas{
+    display: grid;
+    max-width: 960px;
+    margin: 20px auto;
+}
+
+.img_cartas{
+    height: auto;
+    width: 100%;
+    z-index: 9;
+    border-radius: 10px;
+}
+
+.img_icone{
+    display: block;
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 10px;
+    color: white;
+
+    width: 45px;
+    height: auto;
+    z-index: 10;
+}
+/*FOOTER*/
+footer {
+    height: 50px;
+    background-color: #111;
+    color: #999;
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    display: flex;
+    align-items: center;
+}

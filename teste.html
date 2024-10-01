@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interação Dinâmica com Lista</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+    .detalhes {
+      display: none;
+      margin-left: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Raças de Cães</h2>
+  <ul id="listaCaes">
+    <li>
+      Labrador
+      <div class="detalhes">O Labrador é conhecido por ser amigável e muito enérgico.</div>
+    </li>
+    <li>
+      Poodle
+      <div class="detalhes">O Poodle é uma raça inteligente e muito fácil de treinar.</div>
+    </li>
+    <li>
+      Bulldog
+      <div class="detalhes">O Bulldog é calmo, paciente e se adapta bem a apartamentos.</div>
+    </li>
+  </ul>
+
+  <script>
+    // Seleciona todos os itens da lista
+    const itensLista = document.querySelectorAll('#listaCaes li');
+
+    // Itera sobre cada item da lista
+    itensLista.forEach(item => {
+      // Adiciona um evento de clique a cada item
+      item.addEventListener('click', function() {
+        // Seleciona o elemento com a classe "detalhes" dentro do item clicado
+        const detalhes = item.querySelector('.detalhes');
+        
+        // Alterna a exibição dos detalhes (exibe/esconde)
+        if (detalhes.style.display === 'block') {
+          detalhes.style.display = 'none';
+        } else {
+          detalhes.style.display = 'block';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

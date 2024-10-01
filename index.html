@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body id="corpo_body">
+    <div id="modal" class="desativado">
+        <i id="x_fecha_modal" class="fa-sharp fa-solid fa-xmark"></i>
+        <div id="modal_informacoes">
+            
+            
+        </div>
+    </div>
+    <header id="menu">
+        <div id="container_menu">
+            <img id="imagem_logo" src="imagens/Yu-Gi-Oh-Logo-2001.png" alt="">
+            <ul id="ul_menu">
+                <li id="botao_procurar">
+                    <i class="icone_menu fa-sharp fa-solid fa-magnifying-glass"></i>
+                    <p>Procurar</p>
+                </li>
+                <li id="botao_deck">
+                    <span id="quantidade_cartas_deck"></span>
+                    <i class="icone_menu fa-sharp fa-solid fa-clone"></i>
+                    <p>Deck</p>
+    
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="procurar_div" class="desativar_procura">
+        <div id="background_procurar">
+        </div>
+        <div>
+            <form id="procurar_cartas" action="">
+                <input type="search" placeholder="Nome" name="fname" id="pesquisar_nome">  
+                <input type="search" placeholder="Tipo (monster/trap/spell...)" name="type" id="pesquisar_tipo">  
+                <input type="search" placeholder="Raça (Fairy)" name="race" id="pesquisar_raca">  
+                <input type="search" placeholder="Atributo (Water)" name="attribute" id="pesquisar_atributo"> 
+                <input type="search" placeholder="★ Level" name="level" id="pesquisar_level"> 
+                <input type="search" placeholder="Ataque" name="atk" id="pesquisar_atk">
+                <input type="search" placeholder="Defesa" name="def" id="pesquisar_def">
+                <input type="reset" style="background-color: rgb(0,0,0);" value="Limpar dados">
+                <p id="procurar_p">Utilize um dos campos para pesquisar!</p>
+            </form>
+        </div>
+    </div>
+    <section id="section_cartas">
+    </section>
+</body>
+<footer>
+    <p>Desenvolvido por Ramon Souza</p>
+</footer>
+<script src="main.js"></script>
+<script src="https://kit.fontawesome.com/3547d65017.js" crossorigin="anonymous"></script>
+</html>
